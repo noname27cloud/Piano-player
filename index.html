@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piano Player</title>
+    <link rel="icon" type="image/png" href="images/keyboard.png" />
+    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/pianoKeys.css" />
+  </head>
+
+  <body>
+    <div>
+      <button id="interactiveModeBtn">Interactive Mode</button>
+      <button id="preparedModeBtn">Prepared Mode</button>
+    </div>
+
+    <div id="interactiveButtons" style="display: none">
+      <div>
+        <button id="recordBtn">Record</button>
+        <button id="stopRecordingBtn">Stop Recording</button>
+        <button id="downloadBtn">Download Recording</button>
+      </div>
+    </div>
+
+    <div id="preparedButtons" style="display: none">
+      <div>
+        <label for="fileInput">Choose File:</label>
+        <input type="file" id="fileInput" accept=".json" />
+      </div>
+      <div>
+        <label for="speed">Speed:</label>
+        <input
+          type="number"
+          id="speed"
+          min="0.5"
+          max="2"
+          value="1"
+          step="0.5"
+        />
+      </div>
+      <div>
+        <button id="playBtn">Play</button>
+        <button id="stopBtn">Stop</button>
+      </div>
+      <progress id="progressBar" value="0" max="1"></progress>
+    </div>
+
+    <div id="piano" class="set">
+      <div class="key white" data-note="C3" data-key="q">
+        <div class="note1">C3</div>
+      </div>
+      <div class="key black" data-note="C#3" data-key="2">
+        <div class="note1">C#3</div>
+      </div>
+      <div class="key white d" data-note="D3" data-key="w">
+        <div class="note1">D3</div>
+      </div>
+      <div class="key black" data-note="D#3" data-key="3">
+        <div class="note1">D#3</div>
+      </div>
+      <div class="key white c" data-note="E3" data-key="e">
+        <div class="note1">E3</div>
+      </div>
+      <div class="key white b" data-note="F3" data-key="r">
+        <div class="note1">F3</div>
+      </div>
+      <div class="key black" data-note="F#3" data-key="5">
+        <div class="note1">F#3</div>
+      </div>
+      <div class="key white a" data-note="G3" data-key="t">
+        <div class="note1">G3</div>
+      </div>
+      <div class="key black" data-note="G#3" data-key="6">
+        <div class="note1">G#3</div>
+      </div>
+      <div class="key g white" data-note="A3" data-key="y">
+        <div class="note1">A3</div>
+      </div>
+      <div class="key black" data-note="A#3" data-key="7">
+        <div class="note1">A#3</div>
+      </div>
+      <div class="key white f" data-note="B3" data-key="u">
+        <div class="note1">B3</div>
+      </div>
+      <div class="key white" data-note="C4" data-key="i">
+        <div class="note1">C4</div>
+      </div>
+      <div class="key black" data-note="C#4" data-key="9">
+        <div class="note1">C#4</div>
+      </div>
+      <div class="key d white" data-note="D4" data-key="o">
+        <div class="note1">D4</div>
+      </div>
+      <div class="key black" data-note="D#4" data-key="0">
+        <div class="note1">D#4</div>
+      </div>
+      <div class="key white c" data-note="E4" data-key="p">
+        <div class="note1">E4</div>
+      </div>
+      <div class="key white b" data-note="F4" data-key="z">
+        <div class="note1">F4</div>
+      </div>
+      <div class="key black" data-note="F#4" data-key="s">
+        <div class="note1">F#4</div>
+      </div>
+      <div class="key white a" data-note="G4" data-key="x">
+        <div class="note1">G4</div>
+      </div>
+      <div class="key black" data-note="G#4" data-key="d">
+        <div class="note1">G#4</div>
+      </div>
+      <div class="key white g" data-note="A4" data-key="c">
+        <div class="note1">A4</div>
+      </div>
+      <div class="key black" data-note="A#4" data-key="f">
+        <div class="note1">A#4</div>
+      </div>
+      <div class="key white f" data-note="B4" data-key="v">
+        <div class="note1">B4</div>
+      </div>
+      <div class="key white" data-note="C5" data-key="b">
+        <div class="note1">C5</div>
+      </div>
+      <div class="key black" data-note="C#5" data-key="h">
+        <div class="note1">C#5</div>
+      </div>
+      <div class="key white d" data-note="D5" data-key="n">
+        <div class="note1">D5</div>
+      </div>
+      <div class="key black" data-note="D#5" data-key="j">
+        <div class="note1">D#5</div>
+      </div>
+      <div class="key white c" data-note="E5" data-key="m">
+        <div class="note1">E5</div>
+      </div>
+      <div class="key white b" data-note="F5" data-key="k">
+        <div class="note1">F5</div>
+      </div>
+      <div class="key black" data-note="F#5" data-key=",">
+        <div class="note1">F#5</div>
+      </div>
+      <div class="key white a" data-note="G5" data-key="l">
+        <div class="note1">G5</div>
+      </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

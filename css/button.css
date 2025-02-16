@@ -1,0 +1,116 @@
+button {
+  padding: 0.625rem 1.25rem;
+  font-weight: inherit;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+button:hover {
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#interactiveModeBtn,
+#preparedModeBtn {
+  margin: 10px;
+  color: black;
+  background-color: #d9d9d9;
+}
+
+#interactiveModeBtn:hover,
+#preparedModeBtn:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+#interactiveModeBtn.active,
+#preparedModeBtn.active {
+  background-color: #45a049;
+  color: #fff;
+  transform: translateY(2px);
+}
+
+#recordBtn,
+#stopRecordingBtn,
+#downloadBtn,
+#playBtn,
+#stopBtn {
+  margin: 5px;
+  color: white;
+  background-color: #a3a3a3;
+}
+
+#recordBtn:hover,
+#stopRecordingBtn:hover,
+#downloadBtn:hover,
+#playBtn:hover,
+#stopBtn:hover {
+  background-color: #2b84a7;
+}
+
+#recordBtn.active,
+#stopRecordingBtn.active,
+#downloadBtn.active,
+#playBtn.active,
+#stopBtn.active {
+  background-color: #2b84a7;
+  transform: translateY(2px);
+}
+
+label[for="speed"],
+label[for="fileInput"] {
+  margin-right: 20px;
+  font-size: 17px;
+}
+
+#preparedButtons {
+  margin: 20px;
+  line-height: 50px;
+}
+
+#progressBar {
+  width: 50vw;
+  height: 20px;
+  border-radius: 10px;
+  background: #f3f3f3;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  transition: opacity 0.3s ease, width 0.3s ease-in-out;
+}
+
+#progressBar::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 10px;
+}
+
+#progressBar::-webkit-progress-value {
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  transition: width 0.3s ease-in-out;
+}
+
+#progressBar::-moz-progress-bar {
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  transition: width 0.3s ease-in-out;
+}
+
+#progressBar[value="0"]::-webkit-progress-value {
+  background-color: #ff3b30;
+}
+
+#progressBar[value="1"]::-webkit-progress-value {
+  background-color: #4caf50;
+}
+
+#progressBar[value="0"]::-moz-progress-bar {
+  background-color: #ff3b30;
+}
+
+#progressBar[value="1"]::-moz-progress-bar {
+  background-color: #4caf50;
+}
