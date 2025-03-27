@@ -1,5 +1,13 @@
 # Pianoplayer 🎹
 
+## 🎬 Демонстрация работы
+
+![Демонстрация работы](assets/piano-player.gif)
+
+## 🖥 Демо
+
+🔗 [Открыть приложение](https://noname27cloud.github.io/piaano/)
+
 ## Project Description
 
 **Pianoplayer** is an interactive web application that allows users to play a virtual piano, record their performances, and replay them. It also supports importing and exporting recordings in JSON format.
